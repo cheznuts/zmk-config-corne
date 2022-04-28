@@ -32,10 +32,10 @@
 // | CTRL | SHFT | GUI |  [  |   ]   |  \  |   |   /   |  1  |  2  |  3  | SFHT | CTRL |
 //                     | ALT | MINUS |     |   | SPACE |  0  |  .  |
                         bindings = <
-   &kp ESC    &kp MINUS    &kp EQUAL    &kp LBRC     &kp RBRC     &kp PIPE       &kp kp_MINUS &kp N7  &kp N8  &kp N9 &kp PLUS  &kp RET
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp ASTRK    &kp N4  &kp N5  &kp N6 &kp N0    &kp BSPC
-   &kp LCTRL  &kp LSHFT    &kp LGUI     &kp LBKT     &kp RBKT     &kp BSLH       &kp SLASH    &kp N1  &kp N2  &kp N3 &kp RSHFT &kp RCTRL
-                          	        &kp LALT     &kp MINUS    &trans         &kp SPACE    &kp N0  &kp DOT
+   &kp ESC    &kp MINUS    &kp EQUAL    &kp LBRC     &kp RBRC     &kp PIPE       &kp MINUS &kp N7  &kp N8  &kp N9 &kp N0    &kp RET
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp STAR  &kp N4  &kp N5  &kp N6 &kp PLUS  &kp BSPC
+   &kp LCTRL  &kp LSHFT    &kp LGUI     &kp LBKT     &kp RBKT     &kp BSLH       &kp SLASH &kp N1  &kp N2  &kp N3 &kp RSHFT &kp RCTRL
+                          	        &kp LALT     &kp MINUS    &trans         &kp SPACE &kp N0  &kp DOT
                         >;
                 };
 
