@@ -34,7 +34,7 @@
 //                   |      | BSPC |     |      |     | SPACE |   |
                         bindings = <
    &none &kp N1    &kp N2    &kp N3   &kp N4   &kp N5        &kp N6    &kp N7    &kp N8   &kp N9   &kp N0    &none
-   &none &kp TAB   &kp LTCRL &kp CAPS &kp LALT &kp MINUS     &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp SEMI  &none
+   &none &kp TAB   &kp LCTRL &kp CAPS &kp LALT &kp MINUS     &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp SEMI  &none
    &none &kp LSHFT &trans    &trans   &kp DEL  &kp ESC       &kp RET   &trans    &trans   &trans   &kp RSHFT &none
                              &none    &kp BSPC &trans        &trans    &kp SPACE &none
                         >;
