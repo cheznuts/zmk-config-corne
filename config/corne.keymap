@@ -14,29 +14,29 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | |    Q    | W |  E   |     R    |   T    |      |     Y    |     U     |  I   | O |     P     | |
-// | |    A    | S |  D   |     F    |   G    |      |     H    |     J     |  K   | L |     '     | |
-// | | LSHFT/Z | X |  C   |     V    |   B    |      |     N    |     M     |  ,   | . | RSHFT/"/" | |
-//                 | CTRL | LWR/BSPC | SHFT/- |      | RSE/BSPC | LWR/SPACE | CTRL |
+// | |    Q    | W | E |     R    |   T   |      |     Y     |     U     | I | O |     P     | |
+// | |    A    | S | D |     F    |   G   |      |     H     |     J     | K | L |     '     | |
+// | | LSHFT/Z | X | C |     V    |   B   |      |     N     |     M     | , | . | RSHFT/"/" | |
+//                 |   | LWR/BSPC | RSE/- |      | CTRL/CAPS | LWR/SPACE |   |
                         bindings = <
-   &none &kp Q       &kp W &kp E     &kp R      &kp T                &kp Y      &kp U       &kp I     &kp O   &kp P          &none
-   &none &kp A       &kp S &kp D     &kp F      &kp G                &kp H      &kp J       &kp K     &kp L   &kp APOS       &none
-   &none &mt LSHFT Z &kp X &kp C     &kp V      &kp B                &kp N      &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &kp LCTRL &lt 1 BSPC &mt LSHFT MINUS      &lt 2 BSPC &lt 1 SPACE &kp LCTRL
+   &none &kp Q       &kp W &kp E &kp R      &kp T            &kp Y          &kp U       &kp I     &kp O   &kp P          &none
+   &none &kp A       &kp S &kp D &kp F      &kp G            &kp H          &kp J       &kp K     &kp L   &kp APOS       &none
+   &none &mt LSHFT Z &kp X &kp C &kp V      &kp B            &kp N          &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
+                           &none &lt 1 BSPC &lt 2 MINUS      &mt LCTRL CAPS &lt 1 SPACE &none
                         >;
                 };
                 
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// | |   1   |   2   |  3   |  4   |  5   |      |  6   |   7   | 8 | 9 |   0   | |
-// | |  TAB  | LCTRL | CAPS | LALT |  -   |      |  =   |   [   | ] | \ |   ;   | |
-// | | LSHFT |       |      | DEL  | ESC  |      | ENT  |       |   |   | RSHFT | |
-//                   |      | BSPC | SHFT |      | SHFT | SPACE |   |
+// | |  1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
+// | | TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |   RSE/;   | |
+// | | SHFT |       |     |      | ESC  |      | ENT  |       | , | . | SHFT/ "/" | |
+//                  |     | BSPC | SHFT |      | SHFT | SPACE |   |
                         bindings = <
-   &none &kp N1    &kp N2    &kp N3   &kp N4   &kp N5           &kp N6    &kp N7    &kp N8   &kp N9   &kp N0    &none
-   &none &kp TAB   &kp LCTRL &kp CAPS &kp LALT &kp MINUS        &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &kp SEMI  &none
-   &none &kp LSHFT &trans    &trans   &kp DEL  &kp ESC          &kp RET   &trans    &trans   &trans   &kp RSHFT &none
-                             &none    &kp BSPC &kp LSHFT        &kp LSHFT &kp SPACE &none
+   &none &kp N1    &kp N2    &kp N3  &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0         &none
+   &none &kp TAB   &kp LCTRL &kp DEL &kp LALT &kp MINUS      &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &lt 2 SEMI     &none
+   &none &kp LSHFT &trans    &trans  &trans   &kp ESC        &kp RET   &trans    &trans   &trans   &mt RSHFT FSLH &none
+                             &none   &kp BSPC &kp LSHFT      &kp LSHFT &kp SPACE &none
                         >;
                 };
                 
