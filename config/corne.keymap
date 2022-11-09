@@ -14,15 +14,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// | |    Q    | W | E |    R     |   T   |      |   Y   |     U     | I | O |     P     | |
-// | |    A    | S | D |    F     |   G   |      |   H   |     J     | K | L |     '     | |
-// | | LSHFT/Z | X | C |    V     |   B   |      |   N   |     M     | , | . | RSHFT/"/" | |
-//                 |   | LWR/BSPC | RSE/- |      | CTRL  | LWR/SPACE |   |
+// | |    Q    | W |   E   |    R     | T |      |  Y  |     U     |  I   | O |     P     | |
+// | |    A    | S |   D   |    F     | G |      |  H  |     J     |  K   | L |     '     | |
+// | | LSHFT/Z | X |   C   |    V     | B |      |  N  |     M     |  ,   | . | RSHFT/"/" | |
+//                 | RSE/- | LWR/BSPC |   |      | RSE | LWR/SPACE | CTRL |
                         bindings = <
-   &none &kp Q       &kp W &kp E &kp R      &kp T           &kp Y     &kp U       &kp I     &kp O   &kp P          &none
-   &none &kp A       &kp S &kp D &kp F      &kp G           &kp H     &kp J       &kp K     &kp L   &kp APOS       &none
-   &none &mt LSHFT Z &kp X &kp C &kp V      &kp B           &kp N     &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 1 BSPC &lt 2 MINUS     &kp LCTRL &lt 1 SPACE &none
+   &none &kp Q       &kp W &kp E       &kp R      &kp T      &kp Y &kp U       &kp I     &kp O   &kp P          &none
+   &none &kp A       &kp S &kp D       &kp F      &kp G      &kp H &kp J       &kp K     &kp L   &kp APOS       &none
+   &none &mt LSHFT Z &kp X &kp C       &kp V      &kp B      &kp N &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
+                           &lt 2 MINUS &lt 1 BSPC &none      &mo 2 &lt 1 SPACE &kp LCTRL
                         >;
                 };
                 
