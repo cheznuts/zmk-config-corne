@@ -12,7 +12,8 @@
 #define LOWER   1
 #define RAISE   2
 #define COLEMAK 3
-
+#define COLEMAK_NUMBER 4
+#define COLEMAK_ARROW 5
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -49,12 +50,12 @@
 // -----------------------------------------------------------------------------------------
 // | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | COLEMAK | |
 // | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
-// | | LSHFT |       |     |      |  |      |  |       |      |       | DEFAULT | |
+// | | LSHFT |       |     |      |  |      |  |       |      |       |         | |
 //                   |     | BSPC |  |      |  | SPACE |      |
                         bindings = <
    &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3 &none
    &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
-   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &tog 0 &none
+   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &trans &none
                     	         &none        &kp BSPC     &trans     &trans &kp SPACE &none
                          >;
                 };
@@ -69,7 +70,35 @@
    &none &kp Q       &kp W &kp F &kp P      &kp B                &kp J          &kp L       &kp U     &kp Y   &kp APOS       &none
    &none &kp A       &kp R &kp S &kp T      &kp G                &kp M          &kp N       &kp E     &kp I   &kp O          &none
    &none &mt LSHFT Z &kp X &kp C &kp D      &kp V                &kp K          &kp H       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 1 BSPC &mt LSHFT MINUS      &mt LCTRL CAPS &lt 1 SPACE &none                                
+                           &none &lt 4 BSPC &mt LSHFT MINUS      &mt LCTRL CAPS &lt 4 SPACE &none      
+                         >;
+                };
+                
+                colemak_number_layer {
+// -----------------------------------------------------------------------------------------
+// | |  1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
+// | | TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |   RSE/;   | |
+// | | SHFT |       |     |      | ESC  |      | ENT  |       | , | . | SHFT/ "/" | |
+//                  |     | BSPC | SHFT |      | SHFT | SPACE |   |
+                        bindings = <
+   &none &kp N1    &kp N2    &kp N3  &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0         &none
+   &none &kp TAB   &kp LCTRL &kp DEL &kp LALT &kp MINUS      &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &lt 5 SEMI     &none
+   &none &kp LSHFT &trans    &trans  &trans   &kp ESC        &kp RET   &trans    &trans   &trans   &mt RSHFT FSLH &none
+                             &none   &kp BSPC &kp LSHFT      &kp LSHFT &kp SPACE &none
+                         >;
+                };
+                
+                colemak_arrow_layer {
+// -----------------------------------------------------------------------------------------
+// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       |         | |
+// | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
+// | | LSHFT |       |     |      |  |      |  |       |      |       | DEFAULT | |
+//                   |     | BSPC |  |      |  | SPACE |      |
+                        bindings = <
+   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &trans &none
+   &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
+   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &tog 0 &none
+                    	         &none        &kp BSPC     &trans     &trans &kp SPACE &none
                         >;
                 };
         };
