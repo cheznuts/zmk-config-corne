@@ -90,14 +90,14 @@
                 
                 colemak_arrow_layer {
 // -----------------------------------------------------------------------------------------
-// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       |         | |
+// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | DEFAULT | |
 // | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
 // | | LSHFT |       |     |      |  |      |  |       |      |       | DEFAULT | |
 //                   |     | BSPC |  |      |  | SPACE |      |
                         bindings = <
-   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &trans &none
-   &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
-   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &tog 0 &none
+   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3       &none
+   &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans       &none
+   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &tog DEFAULT &none
                     	         &none        &kp BSPC     &trans     &trans &kp SPACE &none
                         >;
                 };
