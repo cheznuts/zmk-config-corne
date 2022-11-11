@@ -8,6 +8,11 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define LOWER   1
+#define RAISE   2
+#define COLEMAK 3
+
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -42,15 +47,29 @@
                 
                 raise_layer {
 // -----------------------------------------------------------------------------------------
-// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       |     | |
-// | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |     | |
-// | | LSHFT |       |     |      |  |      |  |       |      |       |     | |
+// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | COLEMAK | |
+// | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
+// | | LSHFT |       |     |      |  |      |  |       |      |       | DEFAULT | |
 //                   |     | BSPC |  |      |  | SPACE |      |
                         bindings = <
-   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &trans &none
+   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3 &none
    &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
-   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &trans &none
+   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &tog 0 &none
                     	         &none        &kp BSPC     &trans     &trans &kp SPACE &none
+                         >;
+                };
+                
+                colemak_layer {
+// -----------------------------------------------------------------------------------------
+// | |    Q    | W | F |    P     |   B    |      |     J     |     L     | U | Y |     '     |
+// | |    A    | R | S |    T     |   G    |      |     M     |     N     | E | I |     O     |
+// | | LSHFT/Z | X | C |    D     |   V    |      |     K     |     H     | , | . | RSHFT/"/" |
+//                 |   | LWR/BSPC | SHFT/- |      | CTRL/CAPS | LWR/SPACE |   |
+                        bindings = <
+   &none &kp Q       &kp W &kp F &kp P      &kp B                &kp J          &kp L       &kp U     &kp Y   &kp APOS       &none
+   &none &kp A       &kp R &kp S &kp T      &kp G                &kp M          &kp N       &kp E     &kp I   &kp O          &none
+   &none &mt LSHFT Z &kp X &kp C &kp D      &kp V                &kp K          &kp H       &kp COMMA &kp DOT &mt RSHFT FSLH &none
+                           &none &lt 1 BSPC &mt LSHFT MINUS      &mt LCTRL CAPS &lt 1 SPACE &none                                
                         >;
                 };
         };
