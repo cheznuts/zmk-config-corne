@@ -20,21 +20,21 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
 // | |    Q    | W | E |     R    |   T    |      |     Y     |     U     | I | O |     P     | |
 // | |    A    | S | D |     F    |   G    |      |     H     |     J     | K | L |     '     | |
 // | | LSHFT/Z | X | C |     V    |   B    |      |     N     |     M     | , | . | RSHFT/"/" | |
-//                 |   | LWR/BSPC | CTRL/- |      | SHFT/CAPS | LWR/SPACE |   |
+//                 |   | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |   |
                         bindings = <
    &none &kp Q       &kp W &kp E &kp R      &kp T               &kp Y          &kp U       &kp I     &kp O   &kp P           &none
    &none &kp A       &kp S &kp D &kp F      &kp G               &kp H          &kp J       &kp K     &kp L   &kp APOS        &none
    &none &mt LSHFT Z &kp X &kp C &kp V      &kp B               &kp N          &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 1 BSPC &mt LCTRL MINUS     &mt LSHFT CAPS &lt 1 SPACE &none
+                           &none &lt 1 BSPC &mt LCTRL MINUS     &mt LCTRL CAPS &lt 1 SPACE &none
                         >;
                 };
                 
                 lower_layer {
-// -----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 // | |  1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
 // | | TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |   RSE/;   | |
 // | | SHFT |       |     |      | ESC  |      | ENT  |       | , | . | SHFT/ "/" | |
@@ -48,7 +48,7 @@
                 };
                 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
 // | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | COLEMAK | |
 // | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
 // | | LSHFT |       |     |      |  |      |  |       |      |       |         | |
@@ -62,21 +62,21 @@
                 };
                 
                 colemak_layer {
-// -----------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------------------
 // | |    Q    | W | F |    P     |   B    |      |     J     |     L     | U | Y |     '     |
 // | |    A    | R | S |    T     |   G    |      |     M     |     N     | E | I |     O     |
 // | | LSHFT/Z | X | C |    D     |   V    |      |     K     |     H     | , | . | RSHFT/"/" |
-//                 |   | LWR/BSPC | CTRL/- |      | SHFT/CAPS | LWR/SPACE |   |
+//                 |   | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |   |
                         bindings = <
    &none &kp Q       &kp W &kp F &kp P      &kp B                &kp J          &kp L       &kp U     &kp Y   &kp APOS       &none
    &none &kp A       &kp R &kp S &kp T      &kp G                &kp M          &kp N       &kp E     &kp I   &kp O          &none
    &none &mt LSHFT Z &kp X &kp C &kp D      &kp V                &kp K          &kp H       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 4 BSPC &mt LCTRL MINUS      &mt LSHFT CAPS &lt 4 SPACE &none      
+                           &none &lt 4 BSPC &mt LCTRL MINUS      &mt LCTRL CAPS &lt 4 SPACE &none      
                          >;
                 };
                 
                 colemak_number_layer {
-// -----------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------
 // | |  1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
 // | | TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |   RSE/;   | |
 // | | SHFT |       |     |      | ESC  |      | ENT  |       | , | . | SHFT/ "/" | |
@@ -90,10 +90,10 @@
                 };
                 
                 colemak_arrow_layer {
-// -----------------------------------------------------------------------------------------
+// --------------------------------------------------------------------------------
 // | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | DEFAULT | |
 // | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
-// | | LSHFT |       |     |      |  |      |  |       |      |       |       | |
+// | | LSHFT |       |     |      |  |      |  |       |      |       |         | |
 //                   |     | BSPC |  |      |  | SPACE |      |
                         bindings = <
    &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3 &none
