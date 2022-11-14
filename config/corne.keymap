@@ -23,7 +23,7 @@
             tapping-term-ms = <200>;
             quick_tap_ms = <200>;
             flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
+            bindings = <&lt>, <&lt>;
         };
     };
         keymap {
@@ -36,10 +36,10 @@
 // | | LSHFT/Z | X | C |     V    |   B    |      |     N     |     M     | , | . | RSHFT/"/" | |
 //                 |   | LWR/BSPC | CTRL/- |      | SHFT/CAPS | LWR/SPACE |   |
                         bindings = <
-   &none &kp Q       &kp W &kp E &kp R      &kp T                &kp Y          &kp U       &kp I     &kp O   &kp P          &none
-   &none &kp A       &kp S &kp D &kp F      &kp G                &kp H          &kp J       &kp K     &kp L   &kp APOS       &none
-   &none &mt LSHFT Z &kp X &kp C &kp V      &kp B                &kp N          &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 1 BSPC &mt LCTRL MINUS      &mt LSHFT CAPS &lt 1 SPACE &none
+   &none &kp Q       &kp W &kp E &kp R       &kp T               &kp Y          &kp U        &kp I     &kp O   &kp P           &none
+   &none &kp A       &kp S &kp D &kp F       &kp G               &kp H          &kp J        &kp K     &kp L   &kp APOS        &none
+   &none &mt LSHFT Z &kp X &kp C &kp V       &kp B               &kp N          &kp M        &kp COMMA &kp DOT &mt RSHFT FSLH &none
+                           &none &gqt 1 BSPC &mt LCTRL MINUS     &mt LSHFT CAPS &gqt 1 SPACE &none
                         >;
                 };
                 
@@ -78,10 +78,10 @@
 // | | LSHFT/Z | X | C |    D     |   V    |      |     K     |     H     | , | . | RSHFT/"/" |
 //                 |   | LWR/BSPC | CTRL/- |      | SHFT/CAPS | LWR/SPACE |   |
                         bindings = <
-   &none &kp Q       &kp W &kp F &kp P      &kp B                &kp J          &kp L       &kp U     &kp Y   &kp APOS       &none
-   &none &kp A       &kp R &kp S &kp T      &kp G                &kp M          &kp N       &kp E     &kp I   &kp O          &none
-   &none &mt LSHFT Z &kp X &kp C &kp D      &kp V                &kp K          &kp H       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 4 BSPC &mt LCTRL MINUS      &mt LSHFT CAPS &lt 4 SPACE &none      
+   &none &kp Q       &kp W &kp F &kp P       &kp B                &kp J          &kp L        &kp U     &kp Y   &kp APOS       &none
+   &none &kp A       &kp R &kp S &kp T       &kp G                &kp M          &kp N        &kp E     &kp I   &kp O          &none
+   &none &mt LSHFT Z &kp X &kp C &kp D       &kp V                &kp K          &kp H        &kp COMMA &kp DOT &mt RSHFT FSLH &none
+                           &none &gqt 4 BSPC &mt LCTRL MINUS      &mt LSHFT CAPS &gqt 4 SPACE &none      
                          >;
                 };
                 
