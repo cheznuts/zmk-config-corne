@@ -16,7 +16,7 @@
 #define COLEMAK_ARROW 5
 / {
     behaviors {
-        hm: homerow_mods {
+        gqt: global-quick-tap {
             compatible = "zmk,behavior-hold-tap";
             label = "GLOBAL_QUICK_TAP";
             #binding-cells = <2>;
