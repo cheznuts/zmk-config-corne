@@ -15,6 +15,11 @@
 #define COLEMAK_NUMBER 4
 #define COLEMAK_ARROW 5
 
+&lt {
+    quick_tap_ms = <250>;
+};
+        };
+    };
       
         keymap {
                 compatible = "zmk,keymap";
