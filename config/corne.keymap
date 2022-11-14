@@ -14,6 +14,7 @@
 #define COLEMAK 3
 #define COLEMAK_NUMBER 4
 #define COLEMAK_ARROW 5
+
 / {
     behaviors {
         gqt: global-quick-tap {
