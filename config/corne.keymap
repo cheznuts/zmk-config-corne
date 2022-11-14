@@ -15,9 +15,7 @@
 #define COLEMAK_NUMBER 4
 #define COLEMAK_ARROW 5
 
-        };
-    };
-      
+/{
         keymap {
                 compatible = "zmk,keymap";
 
