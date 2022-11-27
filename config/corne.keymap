@@ -8,9 +8,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
+&gqt {
   //  flavor = "global-quick-tap";
-   // tapping_term_ms = <350>;
+   // tapping_term_ms = <300>;
     // global-quick-tap-ms = <150>;
      //bindings = <&kp>, <&kp>;
 };
