@@ -7,74 +7,40 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <combos.dtsi>
 
-/ {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-};
-
-&mt {
-  // flavor = "tap-preffered";
-   // tapping_term_ms = <200>;
-};
-
-/ { 
-
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-        
-         combo_tab {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp TAB>;
-        };
-        
-            combo_ralt {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp RALT>;
-        };
-        
-                    combo_ent {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp LALT>;
-        };
-        
-                           combo_bspc {
-            timeout-ms = <50>;
-            key-positions = <8 9>;
-            bindings = <&kp LGUI>;
-        };
-        
-        
-           combo_rgui {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RGUI>;
-        };
-        
-
-       
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
 #define COLEMAK 3
 #define COLEMAK_NUMBER 4
 #define COLEMAK_ARROW 5
+
+/ { 
+
+        };
+    behaviors {
+        hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <125>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+        };
+        mt: momentary {
+                compatible = "zmk,behavior-hold-tap";
+                label = "MOMENTARY";
+                #binding-cells = <2>;
+                quick-tap-ms = <125>;
+                flavor = "tap-preffered";
+                tapping_term_ms = <200>;
+                bindings = <&kp>, <&kp>;
+        };
+};
+
+
 
 };
         keymap {
