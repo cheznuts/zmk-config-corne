@@ -40,6 +40,8 @@
 
 
 };
+
+\ {
         keymap {
                 compatible = "zmk,keymap";
 
