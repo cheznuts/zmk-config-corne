@@ -8,6 +8,17 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+/ {
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <125>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
 &mt {
   // flavor = "tap-preffered";
    // tapping_term_ms = <200>;
@@ -69,24 +80,24 @@
 
                 default_layer {
 // ----------------------------------------------------------------------------------------------
-// | |    Q    | W | E |     R    |   T    |      |     Y     |     U     | I | O |     P     | |
-// | |    A    | S | D |     F    |   G    |      |     H     |     J     | K | L |     '     | |
-// | | LSHFT/Z | X | C |     V    |   B    |      |     N     |     M     | , | . | RSHFT/"/" | |
-//                 |   | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |   |
+// | | Q | W |    E    |     R    |   T    |      |     Y     |     U     |    I    | O |   P   | |
+// | | A | S | LCTRL/D | LSHFT/F  |   G    |      |     H     |  RSHFT/J  | RCTRL/K | L | RSE/' | |
+// | | Z | X |    C    |     V    |   B    |      |     N     |     M     |    ,    | . |   /   | |
+//           |         | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |         |
                         bindings = <
-   &none &kp Q       &kp W &kp E &kp R      &kp T               &kp Y          &kp U       &kp I     &kp O   &kp P          &none
-   &none &kp A       &kp S &kp D &kp F      &kp G               &kp H          &kp J       &kp K     &kp L   &kp APOS       &none
-   &none &mt LSHFT Z &kp X &kp C &kp V      &kp B               &kp N          &kp M       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 1 BSPC &mt LCTRL MINUS     &mt LCTRL CAPS &lt 1 SPACE &none
+   &none &kp Q &kp W &kp E       &kp R       &kp T               &kp Y          &kp U       &kp I       &kp O   &kp P      &none
+   &none &kp A &kp S &hm LCTRL D &hm LSHFT F &kp G               &kp H          &hm RSHFT J &hm RCTRL K &kp L   &lt 2 APOS &none
+   &none &kp Z &kp X &kp C       &kp V       &kp B               &kp N          &kp M       &kp COMMA   &kp DOT &kp FSLH   &none
+                           &none &lt 1 BSPC  &mt LCTRL MINUS     &mt LCTRL CAPS &lt 1 SPACE &none
                         >;
                 };
                 
                 lower_layer {
 // ----------------------------------------------------------------------------------
-// | |   1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
-// | |  TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |    RSE/;  | |
-// | | LSHFT |       |     |      | ESC  |      | ENT  |       | , | . | RSHFT/"/" | |
-//                   |     | BSPC | SHFT |      | SHFT | SPACE |   |
+// | |      |     |       |       |   |      |     |   7   | 8 | 9 |     0     | |
+// | | LALT | TAB | LCTRL | LSHFT |   |      |  =  |   4   | 5 | 6 |    RSE/;  | |
+// | |      |     |       |       |   |      | ENT |   1   | 2 | 3 | RSHFT/"/" | |
+//                |       | BSPC  |   |      |  0  | SPACE |   |
                         bindings = <
    &none &kp N1    &kp N2    &kp N3  &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0         &none
    &none &kp TAB   &kp LCTRL &kp DEL &kp LALT &kp MINUS      &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &lt 2 SEMI     &none
