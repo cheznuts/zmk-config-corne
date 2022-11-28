@@ -19,7 +19,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-&mt {
+&mt }
   // flavor = "tap-preffered";
    // tapping_term_ms = <200>;
 };
