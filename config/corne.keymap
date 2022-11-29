@@ -37,86 +37,44 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// ----------------------------------------------------------------------------------------------
-// | | Q | W |    E    |     R    |   T    |      |     Y     |     U     |    I    | O |   P   | |
-// | | A | S | LCTRL/D | LSHFT/F  |   G    |      |     H     |  RSHFT/J  | RCTRL/K | L | RSE/' | |
-// | | Z | X |    C    |     V    |   B    |      |     N     |     M     |    ,    | . |   /   | |
-//           |         | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |         |
+// -----------------------------------------------------------------------------------------------------
+// | |   Q   | W |    F    |    P    |    B     |      |     J     |     L     |    U    | Y |   '   | |
+// | |   A   | R | LCTRL/S | LSHFT/T |    G     |      |     M     |  RSHFT/N  | RCTRL/E | I | RSE/O | |
+// | | GUI/Z | X |    C    |    D    |    V     |      |     K     |     H     |    ,    | . |   /   | |
+//               |         | LCTRL/- | LWR/BSPC |      | LWR/SPACE | CTRL/CAPS |         |
                         bindings = <
-   &none &kp Q &kp W &kp E       &kp R       &kp T               &kp Y          &kp U       &kp I       &kp O   &kp P      &none
-   &none &kp A &kp S &hm LCTRL D &hm LSHFT F &kp G               &kp H          &hm RSHFT J &hm RCTRL K &kp L   &lt 2 APOS &none
-   &none &kp Z &kp X &kp C       &kp V       &kp B               &kp N          &kp M       &kp COMMA   &kp DOT &kp FSLH   &none
-                           &none &lt 1 BSPC  &mt LCTRL MINUS     &mt LCTRL CAPS &lt 1 SPACE &none
+   &none &kp Q      &kp W &kp F       &kp P           &kp B          &kp J       &kp L          &kp U       &kp Y   &kp APOS &none
+   &none &kp A      &kp R &hm LCTRL S &hm LSHFT T     &kp G          &kp M       &hm RSHFT N    &hm RCTRL E &kp I   &lt 2 O  &none
+   &none &mt LGUI Z &kp X &kp C       &kp D           &kp V          &kp N       &kp M          &kp COMMA   &kp DOT &kp FSLH &none
+                          &none       &mt LCTRL MINUS &lt 1 BSPC     &lt 1 SPACE &mt RCTRL CAPS &none
                         >;
                 };
                 
                 lower_layer {
-// ----------------------------------------------------------------------------------
-// | |      |     |       |       |   |      |     |   7   | 8 | 9 |     0     | |
-// | | LALT | TAB | LCTRL | LSHFT |   |      |  =  |   4   | 5 | 6 |    RSE/;  | |
-// | |      |     |       |       |   |      | ENT |   1   | 2 | 3 | RSHFT/"/" | |
-//                |       | BSPC  |   |      |  0  | SPACE |   |
+// ----------------------------------------------------------------------
+// | |  |   |  \  |   (   |   )   | DEL  |      |  -  | 7 | 8 | 9 | + | |
+// | | LALT | TAB | LCTRL | LSHFT | ENT  |      |  ,  | 4 | 5 | 6 | . | |
+// | |  {   |  }  |   [   |   ]   | ESC  |      |  /  | 1 | 2 | 3 | = | |
+//                |       |       | BSPC |      | SPC | 0 |   |
                         bindings = <
-   &none &kp N1    &kp N2    &kp N3  &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0         &none
-   &none &kp TAB   &kp LCTRL &kp DEL &kp LALT &kp MINUS      &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &lt 2 SEMI     &none
-   &none &kp LSHFT &trans    &trans  &trans   &kp ESC        &kp RET   &trans    &trans   &trans   &mt RSHFT FSLH &none
-                             &none   &kp BSPC &kp LSHFT      &kp LSHFT &kp SPACE &none
+   &none &kp PIPE &kp BSLH &kp LPAR  &kp RPAR  &kp DEL        &kp MINUS &kp N7 &kp N8 &kp N9 &kp PLUS  &none
+   &none &kp LALT &kp TAB  &kp LCTRL &kp LSHFT &kp RET        &kp COMMA &kp N4 &kp N5 &kp N6 &kp DOT   &none
+   &none &kp LBRC &kp RBRC &kp LBRK  &kp RBRK  &kp ESC        &kp FSLH  &kp N1 &kp N2 &kp N3 &kp EQUAL &none
+                           &none     &none     &kp BSPC       &kp SPACE &kp N0 &none
                         >;
                 };
                 
                 raise_layer {
-// --------------------------------------------------------------------------------
-// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | COLEMAK | |
-// | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
-// | | LSHFT |       |     |      |  |      |  |       |      |       |         | |
-//                   |     | BSPC |  |      |  | SPACE |      |
+// --------------------------------------------------------------------------------------
+// | | BTCLR | BT1 |  BT2  |  BT3  | BT4  |      | VOL UP | BRT DN |  UP  | BRT UP |  | |
+// | | LALT  | TAB | LCTRL | LSHFT | ENT  |      | VOL DN |  LEFT  | DOWN | RIGHT  |  | |
+// | | UNDO  | CUT | COPY  | PASTE | ESC  |      |  MUTE  |        |      |        |  | |
+//                 |       |       | BSPC |      | SPACE  |        |      |
                         bindings = <
-   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3 &none
-   &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
-   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &trans &none
-                    	           &none        &kp BSPC     &trans     &trans &kp SPACE &none
-                         >;
-                };
-                
-                colemak_layer {
-// --------------------------------------------------------------------------------------------
-// | |    Q    | W | F |    P     |   B    |      |     J     |     L     | U | Y |     '     |
-// | |    A    | R | S |    T     |   G    |      |     M     |     N     | E | I |     O     |
-// | | LSHFT/Z | X | C |    D     |   V    |      |     K     |     H     | , | . | RSHFT/"/" |
-//                 |   | LWR/BSPC | CTRL/- |      | CTRL/CAPS | LWR/SPACE |   |
-                        bindings = <
-   &none &kp Q       &kp W &kp F &kp P      &kp B                &kp J          &kp L       &kp U     &kp Y   &kp APOS       &none
-   &none &kp A       &kp R &kp S &kp T      &kp G                &kp M          &kp N       &kp E     &kp I   &kp O          &none
-   &none &mt LSHFT Z &kp X &kp C &kp D      &kp V                &kp K          &kp H       &kp COMMA &kp DOT &mt RSHFT FSLH &none
-                           &none &lt 4 BSPC &mt LCTRL MINUS      &mt LCTRL CAPS &lt 4 SPACE &none      
-                         >;
-                };
-                
-                colemak_number_layer {
-// ----------------------------------------------------------------------------------
-// | |   1   |   2   |  3  |  4   |  5   |      |  6   |   7   | 8 | 9 |     0     | |
-// | |  TAB  | LCTRL | DEL | LALT |  -   |      |  =   |   [   | ] | \ |   RSE/;   | |
-// | | LSHFT |       |     |      | ESC  |      | ENT  |       | , | . | RSHFT/"/" | |
-//                   |     | BSPC | SHFT |      | SHFT | SPACE |   |
-                        bindings = <
-   &none &kp N1    &kp N2    &kp N3  &kp N4   &kp N5         &kp N6    &kp N7    &kp N8   &kp N9   &kp N0         &none
-   &none &kp TAB   &kp LCTRL &kp DEL &kp LALT &kp MINUS      &kp EQUAL &kp LBKT  &kp RBKT &kp BSLH &lt 5 SEMI     &none
-   &none &kp LSHFT &trans    &trans  &trans   &kp ESC        &kp RET   &trans    &trans   &trans   &mt RSHFT FSLH &none
-                             &none   &kp BSPC &kp LSHFT      &kp LSHFT &kp SPACE &none
-                         >;
-                };
-                
-                colemak_arrow_layer {
-// --------------------------------------------------------------------------------
-// | | BTCLR |  BT1  | BT2 | BT3  |  |      |  |       |  UP  |       | DEFAULT | |
-// | |       | LCRTL |     |      |  |      |  | LEFT  | DOWN | RIGHT |         | |
-// | | LSHFT |       |     |      |  |      |  |       |      |       |         | |
-//                   |     | BSPC |  |      |  | SPACE |      |
-                        bindings = <
-   &none &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &trans &trans    &kp UP   &trans    &tog 3 &none
-   &none &trans     &kp LCTRL    &trans       &trans       &trans     &trans &kp LEFT  &kp DOWN &kp RIGHT &trans &none
-   &none &kp LSHFT  &trans       &trans       &trans       &trans     &trans &trans    &trans   &trans    &none  &none
-                    	           &none        &kp BSPC     &trans     &trans &kp SPACE &none
+   &none &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &kp C_VOL_UP &kp C_BRI_DN &kp UP   &kp C_BRI_UP &none  &none
+   &none &kp LALT      &kp TAB       &kpLCTRL      &kp LSHFT     &kp RET            &kp C_VOL_DN &kp LEFT     &kp DOWN &kp RIGHT    &trans &none
+   &none &kp LCTRL (Z) &kp LCTRL (X) &kp LCTRL (C) &kp LCTRL (V) &kp ESC            &kp C_MUTE   &none        &none    &none        &none  &none
+                    	            &none         &none         &kp BSPC           &kp SPACE    &none        &none
                         >;
                 };
         };
