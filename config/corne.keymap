@@ -72,7 +72,7 @@
 //                 |       |       | BSPC |      | SPACE  |        |      |
                         bindings = <
    &none &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &kp C_VOL_UP &kp C_BRI_DN &kp UP   &kp C_BRI_UP &none  &none
-   &none &kp LALT      &kp TAB       &kpLCTRL      &kp LSHFT     &kp RET            &kp C_VOL_DN &kp LEFT     &kp DOWN &kp RIGHT    &trans &none
+   &none &kp LALT      &kp TAB       &kp LCTRL     &kp LSHFT     &kp RET            &kp C_VOL_DN &kp LEFT     &kp DOWN &kp RIGHT    &trans &none
    &none &kp LCTRL (Z) &kp LCTRL (X) &kp LCTRL (C) &kp LCTRL (V) &kp ESC            &kp C_MUTE   &none        &none    &none        &none  &none
                     	            &none         &none         &kp BSPC           &kp SPACE    &none        &none
                         >;
