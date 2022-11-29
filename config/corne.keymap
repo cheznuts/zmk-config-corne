@@ -36,9 +36,9 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------------------
-// | |   Q   | W |    F    |    P     | B |      | J |    L    |    U    | Y |   '   | |
-// | |   A   | R | LCTRL/S | LSHFT/T  | G |      | M | RSHFT/N | RCTRL/E | I | RSE/O | |
-// | | GUI/Z | X |    C    |    D     | V |      | K |    H    |    ,    | . |   /   | |
+// | |   Q   | W |    F    |    P     | B |      | J |    L    |    U    | Y | ' | |
+// | |   A   | R | LCTRL/S | LSHFT/T  | G |      | M | RSHFT/N | RCTRL/E | I | O | |
+// | | GUI/Z | X |    C    |    D     | V |      | K |    H    |    ,    | . | / | |
 //               |         | LWR/BSPC | - |      | ; | LWR/SPC |         |
                         bindings = <
    &none &kp Q      &kp W &kp F       &kp P       &kp B          &kp J    &kp L       &kp U       &kp Y   &kp APOS &none
@@ -78,12 +78,12 @@
                 
                 steno_layer {
 // --------------------------------------------------------------------------------------
-// | | 1 | 1 | 1 | 1 | RSE |      | 1 | 1 | 1 | 1 | 1 | |
+// | | 1 | 1 | 1 | 1 | DFL |      | 1 | 1 | 1 | 1 | 1 | |
 // | | Q | W | E | R |  T  |      | U | I | O | P | [ | |
 // | | A | S | D | F |  G  |      | J | K | L | ; | ' | |
 //           |   | C |  V  |      | N | M |   |
                         bindings = <
-   &none &kp N1 &kp N1 &kp N1 &kp N1 &to 2      &kp N1 &kp N1 &kp N1 &kp N1   &kp N1   &none
+   &none &kp N1 &kp N1 &kp N1 &kp N1 &to 0      &kp N1 &kp N1 &kp N1 &kp N1   &kp N1   &none
    &none &kp Q  &kp W  &kp E  &kp R  &kp T      &kp U  &kp I  &kp O  &kp P    &kp LBKT &none
    &none &kp A  &kp S  &kp D  &kp F  &kp G      &kp J  &kp K  &kp L  &kp SEMI &kp APOS &none
                        &none  &kp C  &kp V      &kp N  &kp M  &none
