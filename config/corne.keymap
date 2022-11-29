@@ -11,9 +11,7 @@
 #define DEFAULT 0
 #define LOWER   1
 #define RAISE   2
-#define COLEMAK 3
-#define COLEMAK_NUMBER 4
-#define COLEMAK_ARROW 5
+
 
 / {         
      behaviors {
