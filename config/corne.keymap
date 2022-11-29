@@ -36,15 +36,15 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------------------
-// | |   Q   | W |    F    |    P    |    B     |      |     J     |     L     |    U    | Y |   '   | |
-// | |   A   | R | LCTRL/S | LSHFT/T |    G     |      |     M     |  RSHFT/N  | RCTRL/E | I | RSE/O | |
-// | | GUI/Z | X |    C    |    D    |    V     |      |     K     |     H     |    ,    | . |   /   | |
-//               |         | LCTRL/- | LWR/BSPC |      | LWR/SPACE | CTRL/CAPS |         |
+// | |   Q   | W |    F    |    P    |    B     |      |     J     |    L    |    U    | Y |   '   | |
+// | |   A   | R | LCTRL/S | LSHFT/T |    G     |      |     M     | RSHFT/N | RCTRL/E | I | RSE/O | |
+// | | GUI/Z | X |    C    |    D    |    V     |      |     K     |    H    |    ,    | . |   /   | |
+//               |         |    -    | LWR/BSPC |      | LWR/SPACE |  CAPS   |         |
                         bindings = <
-   &none &kp Q      &kp W &kp F       &kp P           &kp B          &kp J       &kp L          &kp U       &kp Y   &kp APOS &none
-   &none &kp A      &kp R &hm LCTRL S &hm LSHFT T     &kp G          &kp M       &hm RSHFT N    &hm RCTRL E &kp I   &lt 2 O  &none
-   &none &mt LGUI Z &kp X &kp C       &kp D           &kp V          &kp N       &kp M          &kp COMMA   &kp DOT &kp FSLH &none
-                          &none       &mt LCTRL MINUS &lt 1 BSPC     &lt 1 SPACE &mt RCTRL CAPS &none
+   &none &kp Q      &kp W &kp F       &kp P       &kp B          &kp J       &kp L       &kp U       &kp Y   &kp APOS &none
+   &none &kp A      &kp R &hm LCTRL S &hm LSHFT T &kp G          &kp M       &hm RSHFT N &hm RCTRL E &kp I   &lt 2 O  &none
+   &none &mt LGUI Z &kp X &kp C       &kp D       &kp V          &kp N       &kp M       &kp COMMA   &kp DOT &kp FSLH &none
+                          &none       &kp MINUS   &lt 1 BSPC     &lt 1 SPACE &kp CAPS    &none
                         >;
                 };
                 
@@ -64,15 +64,15 @@
                 
                 raise_layer {
 // --------------------------------------------------------------------------------------
-// | | BTCLR | BT1 |  BT2  |  BT3  | BT4  |      | VOL UP | BRT DN |  UP  | BRT UP |  | |
-// | | LALT  | TAB | LCTRL | LSHFT | ENT  |      | VOL DN |  LEFT  | DOWN | RIGHT  |  | |
-// | | UNDO  | CUT | COPY  | PASTE | ESC  |      |  MUTE  |        |      |        |  | |
-//                 |       |       | BSPC |      | SPACE  |        |      |
+// | | BTCLR | BT1 |  BT2  |  BT3  | DEL  |      |       |      |  UP  |       |  | |
+// | | LALT  | TAB | LCTRL | LSHFT | ENT  |      |       | LEFT | DOWN | RIGHT |  | |
+// | |       |     |       |       | ESC  |      |       |      |      |       |  | |
+//                 |       |       | BSPC |      | SPACE |      |      |
                         bindings = <
-   &none &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &kp C_VOL_UP &kp C_BRI_DN &kp UP   &kp C_BRI_UP &none  &none
-   &none &kp LALT      &kp TAB       &kp LCTRL     &kp LSHFT     &kp RET            &kp C_VOL_DN &kp LEFT     &kp DOWN &kp RIGHT    &trans &none
-   &none &kp LCTRL (Z) &kp LCTRL (X) &kp LCTRL (C) &kp LCTRL (V) &kp ESC            &kp C_MUTE   &none        &none    &none        &none  &none
-                    	            &none         &none         &kp BSPC           &kp SPACE    &none        &none
+   &none &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &kp DEL       &none     &none    &kp UP   &none     &none  &none
+   &none &kp LALT   &kp TAB       &kp LCTRL    &kp LSHFT    &kp RET       &none     &kp LEFT &kp DOWN &kp RIGHT &trans &none
+   &none &none      &none         &none        &none        &kp ESC       &none     &none    &none    &none     &none  &none
+                    	         &none        &none        &kp BSPC      &kp SPACE &none    &none
                         >;
                 };
         };
