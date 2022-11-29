@@ -36,43 +36,43 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------------------
-// | |   Q   | W |    F    |    P    |    B     |      |     J     |    L    |    U    | Y |   '   | |
-// | |   A   | R | LCTRL/S | LSHFT/T |    G     |      |     M     | RSHFT/N | RCTRL/E | I | RSE/O | |
-// | | GUI/Z | X |    C    |    D    |    V     |      |     K     |    H    |    ,    | . |   /   | |
-//               |         |    -    | LWR/BSPC |      | LWR/SPACE |  CAPS   |         |
+// | |   Q   | W |    F    |    P     | B |      |  J   |    L    |    U    | Y |   '   | |
+// | |   A   | R | LCTRL/S | LSHFT/T  | G |      |  M   | RSHFT/N | RCTRL/E | I | RSE/O | |
+// | | GUI/Z | X |    C    |    D     | V |      |  K   |    H    |    ,    | . |   /   | |
+//               |         | LWR/BSPC | - |      | CAPS | LWR/SPC |         |
                         bindings = <
-   &none &kp Q      &kp W &kp F       &kp P       &kp B          &kp J       &kp L       &kp U       &kp Y   &kp APOS &none
-   &none &kp A      &kp R &hm LCTRL S &hm LSHFT T &kp G          &kp M       &hm RSHFT N &hm RCTRL E &kp I   &kp O    &none
-   &none &mt LGUI Z &kp X &kp C       &kp D       &kp V          &kp K       &kp H       &kp COMMA   &kp DOT &kp FSLH &none
-                          &none       &kp MINUS   &lt 1 BSPC     &lt 1 SPACE &kp CAPS    &none
+   &none &kp Q      &kp W &kp F       &kp P       &kp B          &kp J    &kp L       &kp U       &kp Y   &kp APOS &none
+   &none &kp A      &kp R &hm LCTRL S &hm LSHFT T &kp G          &kp M    &hm RSHFT N &hm RCTRL E &kp I   &kp O    &none
+   &none &mt LGUI Z &kp X &kp C       &kp D       &kp V          &kp K    &kp H       &kp COMMA   &kp DOT &kp FSLH &none
+                          &none       &lt 1 BSPC  &kp MINUS      &kp CAPS &lt 1 SPACE &none
                         >;
                 };
                 
                 lower_layer {
 // ----------------------------------------------------------------------
-// | |  |   |  \  |   (   |   )   | DEL  |      |  -  | 7 | 8 | 9 | + | |
-// | | LALT | TAB | LCTRL | LSHFT | ENT  |      |  ,  | 4 | 5 | 6 | . | |
-// | |  {   |  }  |   [   |   ]   | ESC  |      |  /  | 1 | 2 | 3 | = | |
-//                |       |       | BSPC |      | SPC | 0 |   |
+// | |  |   |  \  |   (   |   )   | DEL |      |  -  | 7 | 8 | 9 | + | |
+// | | LALT | TAB | LCTRL | LSHFT | ENT |      |  ,  | 4 | 5 | 6 | . | |
+// | |  {   |  }  |   [   |   ]   | ESC |      |  /  | 1 | 2 | 3 | = | |
+//                |       | BSPC  |  ;  |      | SPC | 0 |   |
                         bindings = <
    &none &kp PIPE &kp BSLH &kp LPAR  &kp RPAR  &kp DEL        &kp MINUS &kp N7 &kp N8 &kp N9 &kp PLUS  &none
    &none &kp LALT &kp TAB  &kp LCTRL &kp LSHFT &kp RET        &kp COMMA &kp N4 &kp N5 &kp N6 &lt 2 DOT &none
    &none &kp LBRC &kp RBRC &kp LBKT  &kp RBKT  &kp ESC        &kp FSLH  &kp N1 &kp N2 &kp N3 &kp EQUAL &none
-                           &none     &none     &kp BSPC       &kp SPACE &kp N0 &none
+                           &none     &kp BSPC  &kp SEMI       &kp SPACE &kp N0 &none
                         >;
                 };
                 
                 raise_layer {
 // --------------------------------------------------------------------------------------
-// | | BTCLR | BT1 |  BT2  |  BT3  | DEL  |      | STENO |      |  UP  |       |  | |
-// | | LALT  | TAB | LCTRL | LSHFT | ENT  |      |       | LEFT | DOWN | RIGHT |  | |
-// | |       |     |       |       | ESC  |      |       |      |      |       |  | |
-//                 |       |       | BSPC |      | SPACE |      |      |
+// | | BTCLR | BT1 |  BT2  |  BT3  | DEL |      | STENO |       |  UP  |       |  | |
+// | | LALT  | TAB | LCTRL | LSHFT | ENT |      |       | LEFT  | DOWN | RIGHT |  | |
+// | |       |     |       |       | ESC |      |       |       |      |       |  | |
+//                 |       |  BSPC |     |      |       | SPACE |      |
                         bindings = <
-   &none &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &kp DEL       &to 3     &none    &kp UP   &none     &none  &none
-   &none &kp LALT   &kp TAB       &kp LCTRL    &kp LSHFT    &kp RET       &none     &kp LEFT &kp DOWN &kp RIGHT &trans &none
-   &none &none      &none         &none        &none        &kp ESC       &none     &none    &none    &none     &none  &none
-                    	         &none        &none        &kp BSPC      &kp SPACE &none    &none
+   &none &bt BT_CLR &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &kp DEL      &to 3 &none     &kp UP   &none     &none  &none
+   &none &kp LALT   &kp TAB       &kp LCTRL    &kp LSHFT    &kp RET      &none &kp LEFT  &kp DOWN &kp RIGHT &trans &none
+   &none &none      &none         &none        &none        &kp ESC      &none &none     &none    &none     &none  &none
+                    	         &none        &kp BSPC     &none        &none &kp SPACE &none
                         >;
                 };
                 
